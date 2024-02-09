@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-face-aframe.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v7.2.0/dist/aframe-extras.min.js"></script>
+
 
 </head>
 <body>
@@ -12,7 +14,10 @@
             <a-asset-item id="glassesModel" src="https://cdn.jsdelivr.net/gh/IYarmak/test@master/assets/glasses/steampunk_glasses.glb"></a-asset-item>
             <a-asset-item id="earringModel" src="https://cdn.jsdelivr.net/gh/IYarmak/test@9caf35376418da71590de4cfecb38179c0e0bac7/assets/earrings/BasicShapeEarrings.glb"></a-asset-item>
         </a-assets>
-        <a-camera  position="0 0 0"></a-camera>
+        <a-camera position="0 0 0"
+                  look-controls="enabled: false"
+                  cursor="fuse: false; rayOrigin: mouse;"
+                  raycaster="near: 10; far: 10000; objects: .clickable"></a-camera>
         <a-light type="ambient" intensity="2"></a-light>
         <a-entity light="type: directional;
                   target: #glass;
