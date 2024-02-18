@@ -11,7 +11,6 @@
 <body>
     <a-scene mindar-face embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights; webgl2: true;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
         <a-assets>
-            <a-asset-item id="glassesModel" src="https://cdn.jsdelivr.net/gh/IYarmak/test@master/assets/glasses/steampunk_glasses.glb"></a-asset-item>
             <a-asset-item id="earringModel" src="https://cdn.jsdelivr.net/gh/IYarmak/test@9caf35376418da71590de4cfecb38179c0e0bac7/assets/earrings/BasicShapeEarrings.glb"></a-asset-item>
         </a-assets>
         <a-camera position="0 0 0"
@@ -38,13 +37,6 @@
                           position="0 -0.3 -0.3"
                           scale="8 8 8"
                           src="#earringModel"></a-gltf-model>
-        </a-entity>
-        <a-entity mindar-face-target="anchorIndex: 168">
-            <a-gltf-model id="glass"
-                          rotation="0 0 0"
-                          position="0 -0.05 0"
-                          scale="0.0085 0.0085 0.0085"
-                          src="#glassesModel"></a-gltf-model>
         </a-entity>
     </a-scene>
 </body>
